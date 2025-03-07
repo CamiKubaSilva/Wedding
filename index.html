@@ -1,260 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucre & Mate | Boda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background: url(https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg);
-        }
-        header {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #f4f4f4;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 700;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 700;
-        }
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-        section:nth-child(odd) {
-            background-color: #ffffff;
-        }
-        section:nth-child(even) {
-            background-color: #f0f0f0;
-        }
-
-        /* Fondo de la hero section */
-        .hero {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #000000;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        /* Fondo de la sección "Código de Vestimenta" */
-        #dresscode {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #E0F7FA; /* Color suave para el fondo */
-        }
-
-        /* Fondo de la sección "Sobre Nosotros" */
-        #about {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #FFEBEE; /* Color suave para el fondo */
-        }
-
-        /* Fondo de la sección "Galería" */
-        #gallery {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #FFF9C4; /* Color cálido para el fondo */
-        }
-        
-        .gallery img {
-            width: 400px;
-            height: 400px;
-            object-fit: cover;
-            margin: 10px;
-        }
-
-        /* Fondo de la sección "Confirmación de Asistencia" */
-        .confirmation {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #FFEB3B; /* Fondo brillante */
-            color: #333;
-        }
-
-        .timeline {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #F1F8E9;
-        }
-
-        .timeline h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-        .timeline-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .timeline-item img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
-            object-fit: cover;
-        }
-
-        .timeline-item div h3 {
-            margin: 5px 0;
-            font-size: 20px;
-        }
-
-        .timeline-item div p {
-            margin: 0;
-            font-size: 16px;
-            color: #666;
-        }
-        /* Fondo de la sección "Sugerencias de Canción" */
-        .song-suggestion {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #FFF3E0; /* Fondo suave */
-        }
-
-        /* Fondo de la sección "Contacto" */
-        #contact {
-            background: url('https://static.wixstatic.com/media/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg/v1/fill/w_980,h_643,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e3c7a3_1bf386d768964e4db27e76d0239a97b1~mv2.jpg') no-repeat center center/cover;
-            background-color: #FFCDD2; /* Fondo cálido y acogedor */
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        footer p {
-            margin: 0;
-        }
-    </style>
+    <title>Lucre & Mate | ¡Nos Casamos!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=IM+Fell+English+SC&family=Playfair+Display:wght@400;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
         <h1>Lucre & Mate</h1>
         <nav>
             <ul>
-                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#event-details">Lugar y Hora</a></li>
                 <li><a href="#gallery">Galería</a></li>
                 <li><a href="#contact">Contacto</a></li>
+                <li><a href="#gifts">Regalos</a></li>
+                <li><a href="#dresscode">Dress Code</a></li>
             </ul>
         </nav>
     </header>
-    
-    <!-- Sección Hero: Fondo grande con texto central -->
+
+    <img src="nefi_gato_mirio.png" class="floating-cat cat1">
+    <img src="nefi_gato_power.png" class="floating-cat cat2">
+
     <section class="hero">
-        <h2>Guarda Nuestra Fecha<br><br>
-            Lucre<br>
-            &<br>
-            Mate<br><br>
-            7 de noviembre del 2025
-        </h2>
+        <h2>¡Nos Casamos! 7 de Noviembre 2025</h2>
     </section>
 
-    <!-- Sección Código de Vestimenta: Fondo suave y colorido -->
-    <section id="dresscode">
-        <h2>Código de Vestimenta</h2>
-        <p>Por favor, ven con tu mejor atuendo formal. ¡Esperamos verte elegante y cómodo para esta ocasión especial!</p>
-    </section>
+    <section class="photo-frame">
+        <img src="DSC_0336.jpg" alt="Foto de pareja">
+    </section>    
 
-    <!-- Sección Sobre Nosotros: Fondo suave -->
-    <section id="about">
-        <h2>Sobre Nosotros</h2>
-        <p>Texto sobre la historia de Melisa y Camilo. Agrega detalles únicos aquí.</p>
-    </section>
-
-    <!-- Sección Galería: Fondo cálido -->
-    <section id="gallery">
-        <h2>Galería</h2>
-        <div class="gallery">
-            <img src="DSC_0170.jpg" alt="Foto 1"> <!-- PONER IMAGEN AQUÍ -->
-            <img src="DSC_0170.jpg" alt="Foto 2"> <!-- PONER IMAGEN AQUÍ -->
-            <img src="DSC_0170.jpg" alt="Foto 3"> <!-- PONER IMAGEN AQUÍ -->
-            <img src="DSC_0170.jpg" alt="Foto 4"> <!-- PONER IMAGEN AQUÍ -->
+    <section id="event-details" class="section">
+        <h2>Dónde y Cuándo</h2>
+        <p><b>Salón 2Virtudes</b> - Cno. Gral Belgrano 5225, Quilmes Oeste</p>
+        <p>Desde las 21:00 hs</p>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Camino+Gral+Belgrano+5225,+Quilmes+Oeste&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
     </section>
 
-    <!-- Sección Confirmación: Fondo brillante -->
-    <section class="confirmation">
-        <h2>¿Venís?</h2>
-        <p>Esta fiesta no sería lo mismo sin vos.<br>
-        ¡Esperamos verte ahí!</p>
-        <hr style="width: 50%; margin: 20px auto; border: 1px solid #fff;">
-        <p>Tendrás tiempo de confirmar<br>
-            hasta el 20 de Agosto, 2025.</p>
-        <button>CONFIRMAR ASISTENCIA</button>
-    </section>
-
-    <!-- Sección Programa: Fondo relajante -->
-    <section class="timeline">
-        <h2>Programa</h2>
-        <div class="timeline-item">
-            <img src="recepcion.png" alt="Recepción"> <!-- PONER IMAGEN AQUÍ -->
-            <div>
-                <h3>19:00 h - RECEPCIÓN</h3>
-                <p>Palacio Sans Souci</p>
+    <section id="gallery" class="section">
+        <div class="carousel-container">
+          
+            <div class="carousel">
+                <img src="DSC_0170.jpg" class="carousel-image active">
+                <img src="DSC_0281.jpg" class="carousel-image">
+                <img src="DSC_0057.jpg" class="carousel-image">
             </div>
-        </div>
-        <div class="timeline-item">
-            <img src="anillos.png" alt="Ceremonia"> <!-- PONER IMAGEN AQUÍ -->
-            <div>
-                <h3>20:00 h - CEREMONIA CIVIL</h3>
-                <p>Palacio Sans Souci</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <img src="cena.jpg" alt="Cena"> <!-- PONER IMAGEN AQUÍ -->
-            <div>
-                <h3>21:00 h - CENA</h3>
-                <p>Palacio Sans Souci</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <img src="fiesta.png" alt="Fiesta"> <!-- PONER IMAGEN AQUÍ -->
-            <div>
-                <h3>22:30 - 04:00 h - FIESTA</h3>
-                <p>Palacio Sans Souci</p>
-            </div>
-        </div>
+            <button class="next-btn carrBtn">›</button>
+            <button class="prev-btn carrBtn">‹</button>
+    </section>    
+
+    <section id="contact" class="section">
+        <h2>Es necesario completar el formulario</h2>
+        <p>Para organizar mejor la fiesta, necesitamos que lo completes.</p>
+        <br>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe8bA-YSSgzLjDGN3O4tKwrEmfI3Yv_n_zl87Wz1EYLhNZO_w/viewform" target="_blank">Completar formulario</a>
+        <br>
+        <br>
+        <p><strong>Amamos a sus hijos, pero en esta ocasión el evento es solo para adultos.</strong></p>
+    </section>    
+
+    <section id="gifts" class="section">
+        <h2>Regalos</h2>
+        <p>Si querés hacernos un regalo, podés hacerlo por transferencia al alias:</p>
+        <p style="font-size: 26px; font-weight: bold; color: #CBA8DB;">lucre.mate.casorio</p>
     </section>
 
-    <!-- Sección Sugerencias de Canción: Fondo suave -->
-    <section class="song-suggestion">
-        <h2>¡La fiesta la hacemos entre todos!</h2>
-        <p>¿Qué tema no puede faltar?</p>
-        <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdMm5CJlDotwftK5iYNWIy145D_-iUhzj0NMPyTp1JlSuyS8Q/viewform'">RECOMENDAR CANCIÓN</button>
-    </section>
-
-    <!-- Sección Contacto: Fondo cálido -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Escríbenos a: <a href="mailto:info@nefimateo.com">info@nefimateo.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Nefi y Mateo. Todos los derechos reservados.</p>
-    </footer>
+    <section id="dresscode" class="section">
+        <h2>Dress Code</h2>
+        <p>Te pedimos llevar algo en tonos violetas o lilas. ¡No hace falta que sea todo tu outfit!</p>
+        <div class="color-wheel-container">
+            <p>✔️</p>
+            <div class="color-wheel allowed"></div>
+            <p>❌</p>
+            <div class="color-wheel avoid"></div>
+        </div>
+        <p>Evitá tonos como los verdes o rojos oscuros.</p>
+    </section>    
+    
+    <script src="script.js"></script>
 </body>
 </html>
