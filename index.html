@@ -4,81 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucre & Mate | ¡Nos Casamos!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=IM+Fell+English+SC&family=Playfair+Display:wght@400;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body id="init">
     <header>
-        <h1>Lucre & Mate</h1>
+        <h1><a href="#init">Lucre & Mate</a></h1>
         <nav>
-            <ul>
-                <li><a href="#event-details">Lugar y Hora</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li><a href="#gifts">Regalos</a></li>
-                <li><a href="#dresscode">Dress Code</a></li>
+            <div class="burger-menu" onclick="toggleMenu()">☰</div> <!-- Burger Icon -->
+            <ul class="nav-links">
+                <li><a href="#event-details-when" onclick="closeMenu()">Cuándo</a></li>
+                <li><a href="#event-details-where" onclick="closeMenu()">Dónde</a></li>
+                <li><a href="#gallery" onclick="closeMenu()">Galería</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Formulario</a></li>
+                <li><a href="#gifts" onclick="closeMenu()">Regalos</a></li>
+                <li><a href="#dresscode" onclick="closeMenu()">Dress Code</a></li>
             </ul>
         </nav>
-    </header>
+    </header>    
 
     <img src="nefi_gato_mirio.png" class="floating-cat cat1">
     <img src="nefi_gato_power.png" class="floating-cat cat2">
 
     <section class="hero">
-        <h2>¡Nos Casamos! 7 de Noviembre 2025</h2>
+        <h2>¡Nos Casamos!</h2>
+        <div class="pics-container">
+            <img class="pics" src="SAV2.png">
+            <h2>Lucre y Mate</h2>
+        </div>
+    </section>
+    
+    <section id="event-details-when" class="section">
+        <h2>Cuándo</h2>
+        <h3>7 de Noviembre 2025 desde las 21hs</h3>
     </section>
 
-    <section class="photo-frame">
-        <img src="DSC_0336.jpg" alt="Foto de pareja">
-    </section>    
-
-    <section id="event-details" class="section">
-        <h2>Dónde y Cuándo</h2>
-        <p><b>Salón 2Virtudes</b> - Cno. Gral Belgrano 5225, Quilmes Oeste</p>
-        <p>Desde las 21:00 hs</p>
+    <section id="event-details-where" class="section">
+        <h2>Dónde</h2>
+        <p><b>2 Virtudes Salón De Eventos</b> - Cno. Gral Belgrano 5225, Quilmes Oeste</p>
         <div class="map-container">
-            <iframe src="https://maps.google.com/maps?q=Camino+Gral+Belgrano+5225,+Quilmes+Oeste&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.359326701621!2d-58.279570299999996!3d-34.77172839999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32ea0b1c35dd9%3A0xb4cbc80e519a4ddb!2s2%20Virtudes%20Salon%20De%20Eventos!5e0!3m2!1sen!2sar!4v1741366711704!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <section id="gallery" class="section">
         <div class="carousel-container">
-          
             <div class="carousel">
-                <img src="DSC_0170.jpg" class="carousel-image active">
-                <img src="DSC_0281.jpg" class="carousel-image">
-                <img src="DSC_0057.jpg" class="carousel-image">
+                <img src="DSC_0170.jpg" class="carousel-img active">
+                <img src="DSC_0281.jpg" class="carousel-img">
+                <img src="DSC_0057.jpg" class="carousel-img">
             </div>
-            <button class="next-btn carrBtn">›</button>
-            <button class="prev-btn carrBtn">‹</button>
     </section>    
 
     <section id="contact" class="section">
-        <h2>Es necesario completar el formulario</h2>
-        <p>Para organizar mejor la fiesta, necesitamos que lo completes.</p>
+        <h2>Para organizar mejor la fiesta, necesitamos que por favor completes el formulario.</h2>
         <br>
         <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe8bA-YSSgzLjDGN3O4tKwrEmfI3Yv_n_zl87Wz1EYLhNZO_w/viewform" target="_blank">Completar formulario</a>
         <br>
         <br>
-        <p><strong>Amamos a sus hijos, pero en esta ocasión el evento es solo para adultos.</strong></p>
+        <p><strong>Queremos que pases una noche increible, por eso te recordamos que la invitacion es solo para adultos. Los niños no estan invitados.</strong></p>
     </section>    
 
     <section id="gifts" class="section">
         <h2>Regalos</h2>
-        <p>Si querés hacernos un regalo, podés hacerlo por transferencia al alias:</p>
-        <p style="font-size: 26px; font-weight: bold; color: #CBA8DB;">lucre.mate.casorio</p>
+        <p>El regalo es opcional, la asistencia obligatoria.</p>
+        <p>Pero si queres tener un detalle con nosotros nos ayudarías con un aporte para la luna de miel.</p>
+        <p style="font-size: 26px; font-weight: bold; color: #CBA8DB;">Alias: lucre.mate.casorio</p>
+        <p style="font-size: 26px; font-weight: bold; color: #CBA8DB;">A nombre de: Lucrecia Rojas Achenbach</p>
     </section>
-
+    
     <section id="dresscode" class="section">
         <h2>Dress Code</h2>
-        <p>Te pedimos llevar algo en tonos violetas o lilas. ¡No hace falta que sea todo tu outfit!</p>
+        <p>Te pedimos llevar algo en tonos violetas o lilas.</p>
+        <p>¡No hace falta que sea todo tu outfit, puede ser un detalle!</p>
         <div class="color-wheel-container">
             <p>✔️</p>
             <div class="color-wheel allowed"></div>
+            <p>Evitá tonos como los verdes o rojos oscuros.</p>
             <p>❌</p>
-            <div class="color-wheel avoid"></div>
+            <div class="color-wheel2-container">
+                <div class="color-wheel2 avoid1"></div>
+                <div class="color-wheel2 avoid2"></div>
+            </div>
         </div>
-        <p>Evitá tonos como los verdes o rojos oscuros.</p>
+        <br>
+        
+    </section>
+
+    <section id="final" class="section">
+        
+        <div class="mobile-cats">
+            <img src="nefi_gato_mirio.png" class="mobile-cat">
+            <h2>¡Los esperamos!</h2>
+            <img src="nefi_gato_power.png" class="mobile-cat">
+        </div>
     </section>    
     
     <script src="script.js"></script>
