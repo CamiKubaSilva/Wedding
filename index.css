@@ -249,6 +249,19 @@ iframe {
     background: #6F1517;
 }
 
+.sparkle {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    animation: fadeOut 0.5s forwards;
+    z-index: 2000;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; transform: scale(1.5); }
+}
+
 /* RESPONSIVENESS */
 @media (max-width: 768px) {
     header {
