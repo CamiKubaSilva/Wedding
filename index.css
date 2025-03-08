@@ -15,16 +15,22 @@ body::-webkit-scrollbar {
 /* HEADER */
 header {
     background: rgba(0, 0, 0, 0.85);
-    padding: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     border-radius: 0;
+    justify-content: space-around;
+}
+
+.navBar{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 a {
