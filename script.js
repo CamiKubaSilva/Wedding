@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Automatically change images every 5 seconds
-    setInterval(nextImage, 5000);
+    setInterval(nextImage, 1800);
 
     // Ensure the first image is visible on page load
     showImage(currentIndex);
